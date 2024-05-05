@@ -6,16 +6,16 @@ import magical.arena.player.Player;
 public class Main {
     public static void main(String[] args) {
     	System.out.println("player1 details");
-        Player player1 = new Player();
+        Player playerA = new Player();
         System.out.println("player2 details");
-        Player player2 = new Player();
-        MagicalArena arena = new MagicalArena(player1, player2);
+        Player playerB = new Player();
+        MagicalArena arena = new MagicalArena(playerA, playerB);
 
         System.out.println("Starting the match...");
         arena.startMatch();
 
-        System.out.println(player1.getName()+" final health: " + player1.getHealth());
-        System.out.println(player2.getName()+" final health: " + player2.getHealth());
+        System.out.println(playerA.getName()+" final health: " + playerA.getHealth());
+        System.out.println(playerB.getName()+" final health: " + playerB.getHealth());
    
     }
 }

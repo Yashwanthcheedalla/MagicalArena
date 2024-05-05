@@ -4,19 +4,19 @@ import java.util.Random;
 import magical.arena.player.Player;
 
 public class MagicalArena {
-    private Player player1;
-    private Player player2;
+    private Player playerA;
+    private Player playerB;
     private Random random;
 
     public MagicalArena(Player player1, Player player2) {
-        this.player1 = player1;
-        this.player2 = player2;
+        this.playerA = player1;
+        this.playerB = player2;
         this.random = new Random();
     }
 
     public void startMatch() {
-        Player attacker = player1.getHealth() < player2.getHealth() ? player1 : player2;
-        Player defender = attacker == player1 ? player2 : player1;
+        Player attacker = playerA.getHealth() < playerB.getHealth() ? playerA : playerB;
+        Player defender = attacker == playerA ? playerB : playerA;
 
         while (attacker.getHealth() > 0 && defender.getHealth() > 0) {
             int attackRoll = random.nextInt(6) + 1;
@@ -37,7 +37,7 @@ public class MagicalArena {
             defender = temp;
         }
 
-        Player winner = player1.getHealth() > 0 ? player1 : player2;
+        Player winner = playerA.getHealth() > 0 ? playerA : playerB;
         System.out.println("The winner is: " + winner.getName());
     }
 }

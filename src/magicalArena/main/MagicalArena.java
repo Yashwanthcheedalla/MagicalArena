@@ -22,9 +22,13 @@ public class MagicalArena {
 
             int attackDamage = attackRoll * attacker.getAttack();
             int defenseDamage = defenseRoll * defender.getStrength();
-
+            
             int damageTaken = Math.max(0, attackDamage - defenseDamage);
             defender.takeDamage(damageTaken);
+            System.out.printf("attackDamage:{%d},defenseDamage:{%d}, damageTaken:{%d}\n",attackDamage,defenseDamage,damageTaken);
+            
+            System.out.println("attacker" +attacker.getName()+ "final health: " + attacker.getHealth());
+            System.out.println("defender" +defender.getName()+"final health: " + defender.getHealth());
 
             Player temp = attacker;
             attacker = defender;

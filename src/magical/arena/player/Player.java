@@ -1,4 +1,4 @@
-package magicalArena.main;
+package magical.arena.player;
 import java.util.Scanner;
 
 public class Player {

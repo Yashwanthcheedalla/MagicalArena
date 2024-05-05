@@ -1,5 +1,7 @@
-package magicalArena.main;
+package magical.arena;
 import java.util.Random;
+
+import magical.arena.player.Player;
 
 public class MagicalArena {
     private Player player1;
@@ -27,8 +29,8 @@ public class MagicalArena {
             defender.takeDamage(damageTaken);
             System.out.printf("attackDamage:{%d},defenseDamage:{%d}, damageTaken:{%d}\n",attackDamage,defenseDamage,damageTaken);
             
-            System.out.println("attacker" +attacker.getName()+ "final health: " + attacker.getHealth());
-            System.out.println("defender" +defender.getName()+"final health: " + defender.getHealth());
+            System.out.println("attacker " +attacker.getName()+ " final health: " + attacker.getHealth());
+            System.out.println("defender " +defender.getName()+" final health: " + defender.getHealth());
 
             Player temp = attacker;
             attacker = defender;
